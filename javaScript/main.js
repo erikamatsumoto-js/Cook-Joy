@@ -161,4 +161,6 @@ async function getRecipe() {
     });
 }
 
-getRecipe();
+if (document.querySelector("#recipePageTitle")) {
+  getRecipe();
+}
