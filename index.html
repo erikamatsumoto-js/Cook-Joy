@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cook Joy</title>
+    <link rel="stylesheet" href="./style/styles.css" />
+    <script src="./javaScript/main.js" type="module"></script>
+  </head>
+
+  <body>
+    <!--Header & Navbar-->
+    <header>
+      <img
+        id="logo"
+        src="./images/Logo.png"
+        alt="Logo: text 'Cook Joy' with confetti"
+      />
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="./html/tip.html">Tips</a>
+        <a href="./html/area.html">Area</a>
+        <a href="./html/ingredients.html">Ingredients</a>
+        <a href="./html/aboutus.html">About us</a>
+      </nav>
+    </header>
+
+    <div>
+      <!--Hero image-->
+      <img
+        id="hero"
+        src="./images/heroImg.png"
+        alt="hero image: En visp, en bunke, matskedar, vetemjöl, torkad pasta, basilika, tomater och kryddor ligger utspridda på ett avslappnat sätt."
+      />
+    </div>
+
+    <!--Innehållet-->
+    <div class="container">
+      <!--Random recipe card-->
+      <main id="main-randomRecipe">
+        <h1>Random recipe</h1>
+        <div id="randomCard">
+          <div>
+            <!--Eftersom jag fick ett WCAG-fel lade jag till ett src-attribut, men eftersom bilden som hämtas från API:et skriver över det visas inte bilden från det src-attributet. När jag kontrollerar i developer tools visas det som ett fel: “Failed to load resource: the server responded with a status of 404 (Not Found)”.-->
+            <img
+              class="recipeImg"
+              src="Imagenotavailable.jpg.png"
+              alt="Finished dish for this recipe"
+            />
+          </div>
+          <div>
+            <!--Warning: Empty heading. Hämtar title från API-->
+            <h2 id="recipeTitle"></h2>
+            <hr />
+            <h3>Country:</h3>
+            <p id="recipeArea"></p>
+            <h3>Category:</h3>
+            <p id="recipeCategory"></p>
+          </div>
+        </div>
+      </main>
+
+      <!--Ingredients link button-->
+      <article class="linkToCategorizedRecipes">
+        <a href="./html/ingredients.html"><h2>Category</h2></a>
+        <hr />
+        <p>
+          Discover yummy recipes by category! From Vegetarian and Vegan to
+          Pasta, Breakfast, and sweet Desserts — there's something delicious for
+          every mood.
+          <a href="./html/ingredients.html">Explore cuisines →</a>
+        </p>
+
+        <a href="./html/ingredients.html"><h2>Ingredients</h2></a>
+        <hr />
+
+        <p>
+          Cook with what you have. Beef, chicken, pork, lamb, goat, or seafood —
+          simple ingredients, tasty recipes!
+          <a href="./html/ingredients.html">Explore cuisines →</a>
+        </p>
+
+        <a href="./html/area.html"><h2>Area</h2></a>
+        <hr />
+        <p>
+          Discover recipes from around the world. From Swedish, Italian,
+          Mexican, Greek, Indian, Chinese, and Japanese dishes — and many more
+          countries to explore!
+          <a href="./html/area.html">Explore cuisines →</a>
+        </p>
+      </article>
+    </div>
+
+    <!--Footer-->
+    <footer>
+      <div>
+        <a href="./html/aboutus.html"><h3>About us</h3></a>
+        <a href="./html/aboutus.html">Contact</a>
+      </div>
+
+      <div>
+        <p>Cookc Joy, 2026. no copyright or rights reserved.</p>
+        <p>Images and text generated with Gemini.</p>
+      </div>
+    </footer>
+  </body>
+</html>

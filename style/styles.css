@@ -1,0 +1,918 @@
+@font-face {
+  font-family: "Oleo Script";
+  src: url(font/OleoScript-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Nunito";
+  src: url(font/Nunito-VariableFont_wght.ttf);
+}
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*=====================
+Generella regler
+=====================*/
+html {
+  font-size: 105%;
+}
+
+body {
+  background-color: rgb(255, 255, 255);
+  font-family: "Nunito", Helvetica, sans-serif;
+  font-size: 1rem;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family:
+    "Oleo Script",
+    Franklin Gothic Medium,
+    sans-serif;
+  word-spacing: 0.3rem;
+  text-align: center;
+  color: rgb(35, 35, 35);
+}
+h2 {
+  margin: 0;
+}
+h1 {
+  letter-spacing: 0.075rem;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  margin: 0;
+  padding: 0.4rem;
+}
+.linkToCategorizedRecipes h2 {
+  margin-top: 1.5rem;
+}
+.linkToCategorizedRecipes h2:hover {
+  text-shadow: 0 0 3rem rgb(255, 251, 0);
+}
+
+p {
+  text-align: justify;
+  color: rgb(35, 35, 35);
+}
+
+a {
+  color: rgb(63, 63, 160);
+  text-decoration: none;
+}
+
+hr {
+  margin-top: 1rem;
+}
+/*Hero img*/
+#hero {
+  width: 100%;
+  object-fit: cover;
+}
+
+/*Header navbar*/
+header {
+  background-color: rgb(255, 214, 224);
+  display: flex;
+  justify-content: center;
+}
+#logo {
+  height: 5rem;
+  width: auto;
+}
+
+nav a {
+  display: inline-block;
+}
+
+nav a {
+  color: rgb(35, 35, 35);
+}
+
+nav a:hover {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+nav h1 {
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 5px rgb(94, 93, 93);
+  padding: 0;
+}
+
+/*Container*/
+.container {
+  margin: 0 auto;
+  max-width: 80%;
+}
+
+/*Footer*/
+footer {
+  background-color: rgb(255, 214, 224);
+  display: flex;
+  justify-content: left;
+}
+
+footer div {
+  margin: auto;
+}
+
+footer h3 {
+  margin: 0;
+}
+footer p {
+  font-size: 1rem;
+  font-weight: lighter;
+  margin: 0;
+}
+
+/* Home -random recipe card*/
+#main-randomRecipe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+#randomCard {
+  background-color: rgba(255, 214, 224, 0.5);
+  box-shadow: 0 4px 8px 0 rgba(35, 35, 35, 0.2);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+}
+
+#randomCard div {
+  text-align: left;
+}
+
+#randomCard h3 {
+  text-align: left;
+  margin: 0;
+}
+#randomCard p {
+  margin-bottom: 1rem;
+}
+
+.recipeImg {
+  height: auto;
+  margin: 0 auto;
+}
+
+/*About us */
+
+form ul {
+  padding-left: 2rem;
+}
+.aboutusUl {
+  list-style-type: none;
+}
+
+.aboutusUl li {
+  margin-bottom: 0.5rem;
+}
+.aboutusUl input[type="text"] {
+  box-sizing: border-box;
+}
+
+.aboutusUl textarea {
+  box-sizing: border-box;
+}
+
+.aboutusUl input,
+.aboutusUl textarea {
+  font-size: 1rem;
+  border: 0.05rem solid #ccc;
+  border-radius: 0.04rem;
+}
+.aboutusUl li:last-child {
+  text-align: right;
+}
+
+.formButton {
+  background-color: rgb(255, 214, 224);
+  width: 4rem;
+  height: 2rem;
+  border: none;
+  border-radius: 0.7rem;
+  box-shadow: 0 4px 8px 0 rgba(35, 35, 35, 0.3);
+}
+
+.formButton:hover {
+  background-color: rgb(255, 160, 183);
+}
+
+#form {
+  background-color: rgb(246, 246, 246);
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: auto;
+  margin-bottom: 1.3rem;
+  padding: 1.5rem;
+}
+
+/*Tips */
+.topicImage {
+  width: 100%;
+  object-fit: cover;
+}
+
+.topicImageTip {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+#main-tips {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.tipsCard {
+  background-color: rgb(246, 246, 246);
+  box-shadow: 0 4px 8px 0 rgba(35, 35, 35, 0.2);
+  display: flex;
+  width: 90%;
+  height: auto;
+  margin-bottom: 1.3rem;
+}
+
+.tipsCard div {
+  margin: 1rem;
+
+  text-align: left;
+}
+
+.tipsCard h3 {
+  text-align: left;
+  margin: 0;
+}
+.tipsImg {
+  height: auto;
+  margin: 0 auto;
+}
+
+table {
+  width: 100%;
+}
+table,
+th,
+td {
+  border: 1px solid black;
+}
+
+.cookingGuide {
+  margin: 1.5rem;
+}
+
+/*Area and Ingredients buttons*/
+.areaLinkButtons {
+  display: flex;
+  justify-content: center;
+}
+
+.areaLinkButtons button {
+  background-color: rgb(193, 251, 164);
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(35, 35, 35, 0.3);
+}
+
+.areaLinkButtons button:hover {
+  box-shadow: 0 4px 8px 0 rgba(35, 35, 35, 0.8);
+}
+
+.categoryButtons {
+  display: flex;
+  justify-content: center;
+}
+
+.categoryButtons button {
+  background-color: rgb(193, 251, 164);
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(35, 35, 35, 0.3);
+}
+
+.categoryButtons button:hover {
+  box-shadow: 0 4px 8px 0 rgba(35, 35, 35, 0.8);
+}
+
+#categoryLinkButtons button {
+  background-color: rgb(144, 241, 239);
+}
+
+#vegLinkButtons button {
+  background-color: rgb(255, 239, 159);
+}
+
+/*Area and Ingredients cards*/
+.catgoraizedCard {
+  background-color: rgba(255, 214, 224, 0.5);
+  box-shadow: 0 4px 8px 0 rgba(35, 35, 35, 0.2);
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+}
+
+.catgoraizedCard div {
+  text-align: left;
+}
+
+.catgoraizedCard h3 {
+  text-align: left;
+  margin: 0;
+}
+.categoraizedRecipeImg {
+  height: auto;
+  margin: 0 auto;
+}
+
+/*recipe-container*/
+#recipePageImg {
+  grid-area: img;
+}
+#recipePageIng {
+  grid-area: ing;
+}
+#recipePageIns {
+  grid-area: ins;
+}
+
+.recipe-container {
+  display: grid;
+  grid-gap: 0.5rem;
+  grid-template-areas:
+    "img ing ing "
+    "ins ins ins  ";
+}
+
+.recipe-container img {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.recipe-container h3 {
+  text-align: left;
+  margin: 0;
+}
+
+.recipeDiv {
+  background-color: rgb(246, 246, 246);
+  text-align: left;
+  padding: 0.7rem;
+}
+
+.recipeDiv ul,
+ol {
+  padding: 1rem;
+  margin: 0;
+}
+
+.recipeDiv li {
+  margin-bottom: 0.5rem;
+}
+
+/*=====================
+Mobile
+=====================*/
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.7rem;
+    margin: 0 0.5rem 0 0.5rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.7rem;
+  }
+
+  #hero {
+    height: 10rem;
+    margin-bottom: 0.5rem;
+  }
+
+  header {
+    height: 2rem;
+  }
+
+  #logo {
+    height: 2rem;
+    width: auto;
+  }
+  nav a {
+    padding: 0.6rem 0.2rem 0.6rem;
+    font-size: 0.6rem;
+  }
+
+  /*footer*/
+  footer {
+    height: 5rem;
+    margin-top: 1.5rem;
+  }
+
+  footer h3 {
+    font-size: 1rem;
+  }
+
+  footer a {
+    font-size: 0.8rem;
+  }
+
+  footer p {
+    font-size: 0.6rem;
+  }
+
+  /*random recipe card*/
+  #randomCard {
+    flex-direction: column;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  #randomCard p {
+    font-size: 1rem;
+  }
+  #randomCard div {
+    padding: 0.5rem;
+  }
+
+  .recipeImg {
+    width: 100%;
+  }
+
+  /*About us*/
+  .aboutusUl {
+    font-size: 0.8rem;
+  }
+
+  .aboutusUl input[type="text"] {
+    width: 70%;
+  }
+
+  .aboutusUl textarea {
+    width: 90%;
+    height: 3rem;
+  }
+
+  /*Topic Image*/
+  .topicImage {
+    height: 8rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .topicImageTip {
+    margin-bottom: 0.5rem;
+  }
+
+  /*Tips*/
+  .tipsCard {
+    flex-direction: column;
+  }
+
+  .tipsImg {
+    width: 10rem;
+  }
+
+  .cutsGuidetext p,
+  li {
+    font-size: 0.7rem;
+    word-break: break-all;
+  }
+
+  /*Area and Ingredients buttons*/
+  .areaLinkButtons button {
+    width: 4.3rem;
+    height: 1rem;
+    border-radius: 0.2rem;
+    margin: 0.1rem;
+    font-size: 0.55rem;
+  }
+  .categoryButtons button {
+    width: 4.3rem;
+    height: 1rem;
+    border-radius: 0.2rem;
+    margin: 0.1rem;
+    font-size: 0.55rem;
+  }
+
+  .areaSelect {
+    margin: 0.7rem;
+    font-size: 0.8rem;
+  }
+
+  select {
+    font-size: 0.7rem;
+  }
+
+  #categoryLinkButtons button {
+    width: 4.3rem;
+  }
+
+  #ingLinkButtons button {
+    width: 4.3rem;
+  }
+
+  #vegLinkButtons button {
+    width: 4.3rem;
+  }
+
+  /*Area and Ingredients cards*/
+  .catgoraizedCard {
+    margin-top: 0.7rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .catgoraizedCard div {
+    margin: 0.5rem;
+    padding: 0;
+  }
+
+  .categoraizedRecipeImg {
+    width: 4rem;
+  }
+
+  .catgoraizedCard h3 {
+    font-size: 1rem;
+  }
+  /*Recipe*/
+  .recipe-container {
+    grid-template-columns: 5rem 1fr 1fr;
+  }
+}
+
+/*=====================
+Surfplatta
+=====================*/
+@media (min-width: 601px) {
+  h1 {
+    font-size: 3rem;
+    margin: 0;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  h3 {
+    font-size: 1.7rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  #hero {
+    height: 20rem;
+    margin-bottom: 1.3rem;
+  }
+
+  header {
+    height: 4rem;
+  }
+
+  #logo {
+    height: 4rem;
+    width: auto;
+  }
+
+  nav a {
+    padding: 2rem 1rem 0 1rem;
+    font-size: 0.8rem;
+  }
+
+  footer {
+    height: 6rem;
+    margin-top: 3.5rem;
+  }
+
+  footer h3 {
+    font-size: 1.7rem;
+  }
+
+  footer p {
+    font-size: 1rem;
+  }
+
+  /*random recipe card*/
+  #randomCard {
+    margin-top: 1.3rem;
+    margin-bottom: 1.3rem;
+  }
+
+  #randomCard div {
+    padding: 1.5rem;
+  }
+
+  .recipeImg {
+    max-width: 13rem;
+  }
+
+  .recipeImg {
+    width: 25rem;
+  }
+
+  /*About us*/
+  form {
+    margin: 1.5rem;
+  }
+
+  .aboutusUl {
+    font-size: 1rem;
+  }
+
+  .aboutusUl input[type="text"] {
+    max-width: 80%;
+  }
+
+  .aboutusUl textarea {
+    width: 70%;
+    height: 3rem;
+  }
+
+  /*Topic Image*/
+  .topicImage {
+    height: 15rem;
+    margin-bottom: 2rem;
+  }
+
+  .topicImageTip {
+    margin-bottom: 1.5rem;
+  }
+
+  /*Tips*/
+  .tipsImg {
+    width: 10rem;
+  }
+
+  .cutsGuidetext p,
+  li {
+    font-size: 1rem;
+    word-break: break-all;
+  }
+
+  /*Area and Ingredients buttons*/
+  .areaLinkButtons button {
+    width: 6rem;
+    height: 2rem;
+    border-radius: 0.2rem;
+    margin: 0.1rem;
+    font-size: 1rem;
+  }
+
+  .categoryButtons button {
+    width: 6rem;
+    height: 2rem;
+    border-radius: 0.2rem;
+    margin: 0.1rem;
+    font-size: 1rem;
+  }
+
+  .areaSelect {
+    margin: 0.7rem;
+    font-size: 1rem;
+  }
+
+  select {
+    font-size: 1rem;
+  }
+
+  .categoryButtons button {
+    width: 7rem;
+  }
+
+  /*Area and Ingredients cards*/
+  .catgoraizedCard {
+    margin-top: 0.7rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .catgoraizedCard div {
+    margin: 0.5rem;
+    padding: 0;
+  }
+
+  .categoraizedRecipeImg {
+    width: 10rem;
+  }
+
+  .catgoraizedCard h3 {
+    font-size: 2rem;
+  }
+
+  /*Recipe*/
+  .recipe-container {
+    grid-template-columns: 15rem 1fr 1fr;
+  }
+}
+
+/*=====================
+Desktop
+=====================*/
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 3.5rem;
+    margin: 0;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.4rem;
+  }
+
+  #hero {
+    height: 27rem;
+    margin-bottom: 3rem;
+  }
+
+  header {
+    height: 6rem;
+  }
+  #logo {
+    height: 6rem;
+    width: auto;
+  }
+  nav a {
+    padding: 2rem 2rem 0 2rem;
+    font-size: 1.4rem;
+  }
+
+  footer {
+    height: 6rem;
+    margin-top: 3.5rem;
+  }
+
+  footer p {
+    font-size: 1rem;
+  }
+
+  /*random recipe card*/
+  #randomCard {
+    margin-top: 1.3rem;
+    margin-bottom: 1.3rem;
+  }
+
+  #randomCard div {
+    padding: 1.5rem;
+    margin: 1.5rem;
+  }
+
+  .recipeImg {
+    max-width: 25rem;
+  }
+
+  /*About us*/
+  form {
+    margin: 3rem;
+  }
+
+  form ul {
+    padding-left: 10rem;
+  }
+
+  .aboutusUl label,
+  .aboutusUl input,
+  .aboutusUl textarea {
+    font-size: 1.5rem;
+  }
+  .formButton {
+    width: 6rem;
+  }
+  /*Tips*/
+  .tipsImg {
+    width: 16rem;
+  }
+
+  /*Recipe*/
+  .recipe-container {
+    grid-template-columns: 23rem 1fr 1fr;
+  }
+
+  /*Ingredients category buttons*/
+  .categoryButtons button {
+    width: 8rem;
+  }
+  .areaLinkButtons button {
+    width: 8rem;
+  }
+
+  /*Categoraized card*/
+  .catgoraizedCard a {
+    font-size: 1.5rem;
+  }
+}
+
+/*=====================
+Large Desktop
+=====================*/
+@media (min-width: 2000px) {
+  h1 {
+    font-size: 5rem;
+    margin: 0;
+  }
+
+  h2 {
+    font-size: 4rem;
+  }
+
+  h3 {
+    font-size: 3rem;
+  }
+
+  p {
+    font-size: 2rem;
+  }
+
+  nav a {
+    padding: 2rem 2rem 0 2rem;
+    font-size: 2.3rem;
+  }
+
+  footer {
+    height: 6rem;
+    margin-top: 3.5rem;
+  }
+
+  footer p {
+    font-size: 1.5rem;
+  }
+  /*random recipe card*/
+  .catgoraizedCard a {
+    margin-bottom: 3rem;
+  }
+  /*About us*/
+  form {
+    margin: 3rem;
+  }
+
+  form ul {
+    padding-left: 15rem;
+  }
+
+  .aboutusUl label,
+  .aboutusUl input,
+  .aboutusUl textarea {
+    font-size: 2rem;
+  }
+
+  .formButton {
+    width: 10rem;
+    height: 3rem;
+  }
+
+  /*Tips*/
+  .tipsImg {
+    width: 25rem;
+  }
+
+  .cutsGuidetext p,
+  li {
+    font-size: 2rem;
+  }
+
+  .cookingGuide th,
+  td {
+    font-size: 2rem;
+  }
+
+  /*Recipe*/
+  .recipe-container {
+    grid-template-columns: 23rem 1fr 1fr;
+  }
+
+  /*Ingredients category buttons*/
+  .categoryButtons button {
+    width: 12rem;
+    font-size: 1.5rem;
+  }
+  .areaLinkButtons button {
+    width: 12rem;
+    font-size: 1.5rem;
+  }
+}
